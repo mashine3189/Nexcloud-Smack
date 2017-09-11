@@ -13,7 +13,7 @@
 ----------------------------------------------------------------------------------------------------
 1) Twitter에서 제공한 API로 Event Listner등록
 2) Event발생시 마다 Akka Http Streaming API를 사용하여 Kafka 저장
-3) [Sample Json](https://github.com/mashine3189/Nexcloud-Smack/blob/master/json/twitter-to-kafka.json)
+3) [DC/OS Service Json](https://github.com/mashine3189/Nexcloud-Smack/blob/master/json/twitter-to-kafka.json)
 
 
 
@@ -24,7 +24,7 @@
 1) Akka Actor를 이용하여 프로세스 실행
 2) 1초마다 Loop를 돌아 Kafka 데이터 체크
 3) Insert json into Cassandra
-4) [Sample Json](https://github.com/mashine3189/Nexcloud-Smack/blob/master/json/kafka-to-cassandra.json)
+4) [DC/OS Service Json](https://github.com/mashine3189/Nexcloud-Smack/blob/master/json/kafka-to-cassandra.json)
 
 
 
@@ -35,7 +35,7 @@
 ----------------------------------------------------------------------------------------------------
 1) DCOS spark 명령으로 프로세스 실행
 2) Spark Streaming으로 데이터 유실없는 실시간 가공데이터 저장( Cassandra )
-3) [Sample Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_sparkstreaming_cassandra.sh.sh)
+3) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_sparkstreaming_cassandra.sh.sh)
 
 
 
@@ -47,4 +47,4 @@
 1) Akka Actor로 프로세스 실행
 2) Spark Sql(RDD)를 이용한 raw data가공
 3) 가공데이터 batch table에 저장
-4) [Sample Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_batch_cassandra.sh.sh)
+4) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_batch_cassandra.sh.sh)
