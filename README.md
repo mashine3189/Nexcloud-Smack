@@ -7,6 +7,7 @@
 * 프로세실행 : Akka {Actor, AkkaHttpStreaming}
 
 
+![Deployed services](./shell/architecture.png)
 
 ----------------------------------------------------------------------------------------------------
 ### Twitter -> Akka HTTP with Streaming -> Kafka ( Raw Data 수집 )
