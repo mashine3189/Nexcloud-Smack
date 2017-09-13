@@ -1,1 +1,0 @@
-dcos spark run --submit-args='--driver-cores 0.1 --driver-memory 1024M --total-executor-cores 4 --class com.nexcloud.batch.BatchProcessor http://192.168.0.120/Lambda-Arch-Spark-assembly-0.1.0.jar tweets node.cassandra.l4lb.thisdcos.directory:9042 broker.kafka.l4lb.thisdcos.directory:9092'
