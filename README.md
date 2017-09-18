@@ -36,7 +36,7 @@
 ----------------------------------------------------------------------------------------------------
 1) DCOS spark 명령으로 프로세스 실행
 2) Spark Streaming으로 데이터 유실없는 실시간 가공데이터 저장( Cassandra )
-3) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_sparkstreaming_cassandra.sh.sh)
+3) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_sparkstreaming_cassandra.sh)
 
 
 
@@ -48,4 +48,4 @@
 1) Akka Actor로 프로세스 실행
 2) Spark Sql(RDD)를 이용한 raw data가공
 3) 가공데이터 batch table에 저장
-4) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_batch_cassandra.sh.sh)
+4) [실행 Spark Shell](https://github.com/mashine3189/Nexcloud-Smack/blob/master/shell/kafka_batch_cassandra.sh)
