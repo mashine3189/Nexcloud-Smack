@@ -8,7 +8,7 @@
 
 ![Deployed services](./shell/architecture.png)
 ----------------------------------------------------------------------------------------------------
-![Deployed services](./shell/smack.PNG)
+![Deployed services](./shell/smack.png)
 
 ----------------------------------------------------------------------------------------------------
 ### Twitter -> Akka HTTP with Streaming -> Kafka ( Raw Data 수집 )
