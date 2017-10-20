@@ -6,9 +6,9 @@
 * 실시간 스트리밍 변환 : Spark
 * 프로세실행 : Akka {Actor, AkkaHttpStreaming}
 
-![Deployed services](./shell/smack.png)
-----------------------------------------------------------------------------------------------------
 ![Deployed services](./shell/architecture.png)
+----------------------------------------------------------------------------------------------------
+![Deployed services](./shell/smack.png)
 
 ----------------------------------------------------------------------------------------------------
 ### Twitter -> Akka HTTP with Streaming -> Kafka ( Raw Data 수집 )
