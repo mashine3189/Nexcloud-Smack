@@ -2,9 +2,9 @@ package com.nexcloud.sample
 
 import java.util.Date
 import java.util.concurrent.LinkedBlockingQueue
-import com.nexcloud.api.kafka.KafkaTwitterProducer
+import com.nexcloud.api.kafka.Producer
 
-import com.nexcloud.util.{JsonHelper, KafkaCassandraConfigUtil}
+import com.nexcloud.util.{JsonHelper, ConfigUtil}
 import org.slf4j.LoggerFactory
 import twitter4j._
 import twitter4j.conf.ConfigurationBuilder
@@ -22,10 +22,10 @@ object TwitterStreamApp extends App with JsonHelper{
 
   val cb = new ConfigurationBuilder()
   cb.setDebugEnabled(true)
-    .setOAuthConsumerKey(KafkaCassandraConfigUtil.consumerKey)
-    .setOAuthConsumerSecret(KafkaCassandraConfigUtil.consumerSecret)
-    .setOAuthAccessToken(KafkaCassandraConfigUtil.accessToken)
-    .setOAuthAccessTokenSecret(KafkaCassandraConfigUtil.accessTokenSecret)
+    .setOAuthConsumerKey(ConfigUtil.consumerKey)
+    .setOAuthConsumerSecret(ConfigUtil.consumerSecret)
+    .setOAuthAccessToken(ConfigUtil.accessToken)
+    .setOAuthAccessTokenSecret(ConfigUtil.accessTokenSecret)
 
   val twitterStream = new TwitterStreamFactory(cb.build()).getInstance()
   var counter = 0
@@ -40,7 +40,7 @@ object TwitterStreamApp extends App with JsonHelper{
       val userName = user.getName.replaceAll("'","''")
 
       val message = write(Tweet(tweetId,status.getCreatedAt.getTime,user.getId,userName,status.getPlace.getCountry,user.getFriendsCount))
-      KafkaTwitterProducer.send(KafkaCassandraConfigUtil.kafkaTopic,message)
+      Producer.send(ConfigUtil.kafkaTopic,message)
       println(s"tweet text is ::::   ${message}  counter ::: ${counter}")
 
     }
