@@ -1,7 +1,7 @@
 # NexCloud SMACK Stack Sample
 
 * 데이터 소 스 : 트위터
-* 브로커 : Kafka ( Kafka topic : tweet_spark )
+* 브로커 : Kafka 
 * 데이터 저장소 : cassandra
 * 실시간 스트리밍 변환 : Spark
 * 프로세실행 : Akka {Actor, AkkaHttpStreaming}
